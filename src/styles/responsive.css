@@ -1,9 +1,11 @@
 .restaurants {
     display: grid;
-    gap: 16px;
+    grid-column-gap: 0;
+    grid-row-gap: 30px;
 }
 
 @media screen and (max-width: 475px){
+            
     .header-menu {
         display: block;
     }
@@ -28,14 +30,19 @@
     .nav-item {
         width: 100%;
     }
+
+    .restaurant-item-title {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 600px) {
+
     .restaurants {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 15px;
-        grid-row-gap: 10px;
+        grid-row-gap: 15px;
     }
 }
 
@@ -50,5 +57,8 @@
 @media screen and (min-width: 1200px) {
     main {
       max-width: 1200px;
+    }
+    .sticky + .hero {
+        margin-top: 70px;
     }
 }

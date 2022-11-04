@@ -40,7 +40,6 @@ const main = () => {
     const listRestaurant = async () => {
         try {
             const result = await Restaurant.getAll();
-            console.log('a');
             if (result.length === 0) {
                 fallbackResult('data tidak ditemukan');
             }else {
