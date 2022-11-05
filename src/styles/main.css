@@ -121,6 +121,9 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: var(--white-color);
+  padding: 1.3em;
+  width: 100%;
+  text-align: center;
 }
 
 .sticky {
@@ -269,6 +272,9 @@ main {
 .restaurant-item-title a {
   text-decoration: none;
   color: var(--primary-color);
+  min-width: 44px;
+  min-height: 44px;
+  display: block;
 }
 
 
@@ -277,9 +283,8 @@ main {
   color: var(--secondary-color);
 }
 .restaurant-item-description{
-  margin-top: 16px;
   font-size: 12px;
-  line-height: 1.5em;
+  line-height: 1.6em;
   color: var(--dark-color);
 }
 
@@ -301,4 +306,5 @@ footer a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
+  padding: 1.3rem;
 }
