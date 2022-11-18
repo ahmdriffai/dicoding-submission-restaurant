@@ -3,44 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta name="theme-color" content="#3A6351"/>
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <!-- web manifest -->
+  <link rel="manifest" href="./app.webmanifest">
+  <!-- font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
   <title>Restaurant Finder</title>
 </head>
 <body>
-  <a href="#content" class="skip-link">Menuju ke konten</a>
+  <a href="#mainContent" class="skip-link">Menuju ke konten</a>
   <header class="header">
       <div class="header-inner">
         <h1 class="header-title">
           Restaurant Finder
         </h1>
       </div>
-      <button id="menu" class="header-menu">☰</button>
+      <button id="hamburgerMenu" class="header-menu">
+        <i class="fas fa-bars"></i>
+      </button>
   </header>
   <nav id="drawer" class="nav">
     <ul class="nav-list">
-      <li class="nav-item"><a href="/">Home</a></li>
-      <li class="nav-item"><a href="#">Favorite</a></li>
+      <li class="nav-item"><a href="#/">Home</a></li>
+      <li class="nav-item"><a href="#/list-restaurant">Restaurant</a></li>
+      <li class="nav-item"><a href="#/favorite-restaurant">Favorite</a></li>
       <li class="nav-item"><a href="https://github.com/ahmdriffai" target="_blank">About Us</a></li>
     </ul>
   </nav>
-  <div class="hero">
-    <div class="hero-inner">
-      <h1 class="hero-title">Temukan Restourant Ternama</h1>
-      <p class="hero-tagline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut iste explicabo vel!</p>
-    </div>
-  </div>
-  <main>
-    <section class="content" id="content">
-      <div class="explore">
-        <h1 class="explore-label">Explore Restaurant</h1>
-        <div class="restaurants">
-        </div>
-      </div>
-    </section>
+  <main id="mainContent" tabindex="0">
   </main>
   <footer>
     <h1> copyrigth © 2022
