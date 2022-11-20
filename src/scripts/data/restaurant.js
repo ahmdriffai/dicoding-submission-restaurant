@@ -1,16 +1,16 @@
-import data_json from '../../DATA.json';
+import dataJson from '../../DATA.json';
 
 class Restaurant {
-    static async getAll() {
-        try {
-        
-            const responseJson = data_json;
-    
-            return Promise.resolve(responseJson.restaurants);
-        } catch (error) {
-            return Promise.reject(`data tidak ditemukan`);
-        }
+  static async getAll() {
+    try {
+      const responseJson = dataJson;
+
+      return Promise.resolve(responseJson.restaurants);
+    } catch (error) {
+      // eslint-disable-next-line prefer-promise-reject-errors
+      return Promise.reject('data tidak ditemukan');
     }
+  }
 }
 
 export default Restaurant;
