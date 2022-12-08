@@ -135,18 +135,25 @@ body {
 
 /* Hero */
 .hero{
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  min-height: 380px;
   width: 100%;
   text-align: center;
-  background-image: url('../public/images/heros/hero-image_2.jpg');
+  /* background-image: url('../public/images/heros/hero-image_2-small.jpg'); */
   background-position: center;
   background-size: cover;
   background-color: var(--primary-color);
   position: relative;
   margin-top: 20px;
   border-radius: 30px;
+  overflow: hidden;
+}
+
+
+
+.hero picture img {
+  width: 100%;
+  height: 100%;
 }
 
 .hero::after {
@@ -160,11 +167,13 @@ body {
   opacity: 0.3;
   z-index: 0;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .hero-inner{
-  position: relative;
+  position: absolute;
   z-index: 1;
+  text-align: center;
   margin: 0 auto;
   max-width: 100%;
 }
