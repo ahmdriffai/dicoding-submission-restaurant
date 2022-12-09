@@ -5,10 +5,11 @@ const Home = {
   async render() {
     return `
     <div class="hero">
-      <div class="hero-inner">
-        <h1 class="hero-title">Temukan Restourant Ternama</h1>
-        <p class="hero-tagline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut iste explicabo vel!</p>
-      </div>
+      <picture>
+        <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
+        <img class="lazyload" src='./images/heros/hero-image_2-large.jpg' 
+            alt="life is strange 2 poster">
+      </picture>
     </div>
     <section class="content" id="content">
       <div class="explore">

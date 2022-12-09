@@ -6,7 +6,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       <h3>${restaurant.city}</h3>
     </div>
     <div class="restaurant-item-thumnail">
-      <img src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" alt="${restaurant.name}" alt="${restaurant.name}" >
+      <img data-src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" class="lazyload" alt="${restaurant.name}" alt="${restaurant.name}" >
     </div>
     <div class="restaurant-item-content">
       <p class="restaurant-item-rating">Rating: ${restaurant.rating}</p>
@@ -20,7 +20,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant__detail">
-    <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" alt="${restaurant.name}" />  
+    <img class="restaurant__poster lazyload" data-src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" alt="${restaurant.name}" />  
     <div class="restaurant__desc">
       <h3>${restaurant.name}</h3>
       <p class="restaurant__address">${restaurant.address}</p>
@@ -51,32 +51,14 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </div>
 `;
 
-// const test = `
-// <h2 class="movie__title">${restaurant.name}</h2>
-//   <div class="movie__info">
-//     <h3>Information</h3>
-//     <h4>Tagline</h4>
-//     <p>${restaurant.tagline}</p>
-//     <h4>Release Date</h4>
-//     <p>${restaurant.release_date}</p>
-//     <h4>Duration</h4>
-//     <p>${restaurant.runtime} minutes</p>
-//     <h4>Rating</h4>
-//     <p>${restaurant.vote_average}</p>
-//   </div>
-//   <div class="movie__overview">
-//     <h3>Overview</h3>
-//     <p>${restaurant.overview}</p>
-//   </div>`;
-
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+const createLikeRestaurantButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="far fa-heart"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+const createUnlikeRestaurantButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fas fa-heart"></i>
   </button>
 `;
@@ -84,6 +66,6 @@ const createLikedButtonTemplate = () => `
 export {
   createRestaurantDetailTemplate,
   createRestaurantItemTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
 };
