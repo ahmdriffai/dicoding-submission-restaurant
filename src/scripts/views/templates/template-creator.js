@@ -6,7 +6,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       <h3>${restaurant.city}</h3>
     </div>
     <div class="restaurant-item-thumnail">
-      <img src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" class="lazyload" alt="${restaurant.name}" alt="${restaurant.name}" >
+      <img data-src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" class="lazyload" alt="${restaurant.name}" alt="${restaurant.name}" >
     </div>
     <div class="restaurant-item-content">
       <p class="restaurant-item-rating">Rating: ${restaurant.rating}</p>
@@ -20,7 +20,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="restaurant__detail">
-    <img class="restaurant__poster lazyload" src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" alt="${restaurant.name}" />  
+    <img class="restaurant__poster lazyload" data-src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" alt="${restaurant.name}" />  
     <div class="restaurant__desc">
       <h3>${restaurant.name}</h3>
       <p class="restaurant__address">${restaurant.address}</p>
